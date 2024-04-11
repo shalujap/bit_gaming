@@ -1,0 +1,173 @@
+.main_chart_top {
+    .main_chart_center {
+        height: 100%;
+        margin-bottom: 10px;
+        background-color: var(--card-bg-color);
+        border-radius: 10px;
+
+        // @media only screen and (min-width:769px) and (max-width:839px){
+        //     height: 394px;
+        // }
+
+        @media($breakpoint_MD) {
+            margin-bottom: 90px;
+        }
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+
+        }
+    }
+}
+
+.main_buy_sell_tabs {
+    // height: 419px;
+    margin-bottom: 10px;
+
+
+    @media($breakpoint_MD) {
+        margin-bottom: 90px;
+    }
+
+
+    .main_buysell {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 10px;
+
+        .inner {
+            width: 50%;
+            border-radius: 10px;
+            padding: 0px 20px 20px 20px;
+            background-color: var(--card-bg-color);
+
+            .calculation_Sec {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                margin-top: 15px;
+                width: 100%;
+
+                .left_sec {
+                    .number_input {
+                        background-color: var(--body-bg);
+                        border-radius: 100px;
+                        padding: 7px;
+                        text-align: center;
+                        position: relative;
+
+                        button {
+                            background-color: var(--body-bg);
+                            border-radius: 100px;
+                            color: var(--light-theme-txt);
+                            padding: 0px 8px;
+                            border: 1px solid var(--light-theme-txt);
+                            position: absolute;
+                        }
+
+                        .left_btn {
+                            left: 7px;
+                        }
+
+                        .right_btn {
+                            right: 7px;
+                        }
+
+                        input {
+                            background-color: transparent;
+                            border: none;
+                            color: var(--theme-txt-color);
+                            text-align: center;
+
+                            &:focus-visible {
+                                outline: none;
+                            }
+                        }
+
+                    }
+
+                    .all_btns {
+                        display: flex;
+                        gap: 8px;
+                        margin-top: 10px;
+                        flex-wrap: wrap;
+
+                        .btn_items {
+                            background-color: var(--input-bg-color);
+                            border-radius: 100px;
+                            padding: 5px 30px;
+                            color: var(--theme-txt-color);
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .right_Sec {
+                    .data_box {
+                        background-color: var(--secondary-color);
+                        border-radius: 15px;
+                        padding: 10px 50px;
+                        border: 1px solid var(--theme-txt-color);
+                        text-align: center;
+                        white-space: nowrap;
+
+                        h6 {
+                            color: var(--theme-txt-color);
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+            .react-tabs__tab-panel {
+                display: flex;
+                justify-content: center;
+            }
+
+            .main_autoplay {
+                display: block;
+
+                .autoplay_data {
+                    margin-top: 10px;
+
+                    .auto_sec {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 10px;
+
+                        .autoplay_btn {
+                            border: solid 1px #46c0f2;
+                            border-radius: 100px;
+                            background-color: #1d7aca;
+                            color: var(--theme-txt-color);
+                            text-align: center;
+                            box-shadow: none;
+                            cursor: pointer;
+                            padding: 5px 20px;
+                        }
+                        .right_toggle{
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+
+                            p{
+                                margin-bottom: 0px;
+                                color: var(--theme-txt-color);
+                            }
+
+                            .value{
+                                color: var(--theme-txt-color);
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

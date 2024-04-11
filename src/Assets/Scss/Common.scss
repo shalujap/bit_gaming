@@ -1,0 +1,56 @@
+
+* {
+    margin: 0px;
+}
+
+body {
+    background-color: var(--body-bg);
+    text-transform: capitalize;
+}
+
+//Chrome, Safari, Edge, Opera
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+//firfox
+input[type=number] {
+    -moz-appearance: textfield;
+
+
+}
+
+
+@mixin display($justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+p {
+    // font-family: 'Roboto', sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   
+    text-transform: capitalize;
+}
+
+
+
+
+@mixin display($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+

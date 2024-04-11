@@ -1,0 +1,39 @@
+// for default theme Light
+:root {
+    
+    --secondary-color: #28a90a;
+    --red: #e3063a;
+    --pink: #c018b4;
+    --body-bg: #171716;
+    --theme-txt-color: #fff;
+    --card-bg-color: #1b1c1d;
+    --card-bg-yellow: #000;
+    --input-bg-color: #2c2d30;
+    --primary-color: #f8ff15;
+    --light-theme-txt:#9a9696;
+    --border-color: #2f2f2e;
+    --footer-txt-color: #fff;
+    --white-color: #fff;
+    --black-color: #000;
+    --black-white-image: url(../Images/white-angle.png);
+
+}
+
+
+//for dark theme
+body[data-theme='light'] {
+    --secondary-color: #28a90a;
+    --red: #e3063a;
+    --pink: #c018b4;
+    --body-bg: #fff;
+    --theme-txt-color: #000;
+    --card-bg-color: #f2f4fa;
+    --card-bg-yellow: #f2f4fa;
+    --primary-color: #f8ff15;
+    --light-theme-txt: #4D4D4D;
+    --border-color: #e3e8ed;
+    --footer-txt-color: #000;
+    --white-color: #fff;
+    --black-color: #000;
+    --black-white-image: url(../Images/black-angle.png);
+}

@@ -1,0 +1,14 @@
+// @import 'bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/scss/bootstrap";
+@import "./variable"; 
+@import "./Common.scss"; 
+@import './Footer.scss'; 
+@import './Trading/Maintrading.scss';
+@import './Trading/Toplivechart.scss';
+@import './Trading/Orderbook.scss';
+@import './Trading/MainLivechart.scss';
+@import './Trading/Righttable.scss';
+@import './Trading/Bottomtable.scss';
+
+
+

@@ -1,0 +1,285 @@
+.main_order_Sec {
+
+
+    .main_table_data {
+        .main_table_order {
+
+            .tabs_card_dcs {
+                margin-bottom: 10px;
+                overflow-x: hidden;
+
+                .main_order_heading {
+                    color: $button-txt-color;
+                    margin-bottom: 0;
+                    padding: 4px 10px;
+                    background-color: var(--primary-color);
+                }
+
+
+                .data_table {
+                    padding: 0 0 16px;
+                    height: 653px;
+                    overflow-y: scroll;
+
+                    table {
+                        width: 100%;
+                        color: var(--theme-txt-color);
+                        border-collapse: collapse;
+                        caption-side: bottom;
+
+                        thead {
+                            background-color: var(--card-bg-color);
+                            color: var(--light-theme-txt);
+                            position: -webkit-sticky;
+                            position: sticky;
+                            top: 0;
+                            z-index: 1;
+
+                            tr {
+                                th {
+                                    font-size: 13px;
+                                    font-weight: 400;
+                                    padding: 10px 10px;
+                                    background-color: var(--card-bg-color);
+                                    color: var(--light-theme-txt);
+                                }
+
+                                .total {
+                                    text-align: right;
+                                }
+                            }
+                        }
+
+                        tbody {
+                            position: relative;
+                            top: 5px;
+
+                            tr {
+
+                                td {
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    padding: 10px 10px;
+                                    margin: 10px 0px;
+                                    background-color: var(--body-bg);
+
+
+                                    &:first-child {
+                                        border-top-left-radius: 100px;
+                                        border-bottom-left-radius: 100px;
+
+                                    }
+
+                                    &:last-child {
+                                        border-top-right-radius: 100px;
+                                        border-bottom-right-radius: 100px;
+                                    }
+                                }
+
+
+                            }
+
+                        }
+
+                        .table_flex {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+
+                            img {
+                                width: 35px;
+                                height: 35px;
+                            }
+                        }
+
+                    }
+
+
+                }
+
+                .total_area {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 10px;
+                    background-color: var(--card-bg-color);
+
+                    .all_bets {
+                        h6 {
+                            margin-bottom: 0px;
+                            color: var(--theme-txt-color);
+                            font-size: 15px;
+                        }
+
+                        p {
+                            margin-bottom: 0px;
+                            color: var(--theme-txt-color);
+                        }
+                    }
+
+                    .right_bet {
+                        display: flex;
+                        gap: 5px;
+                        align-items: center;
+                        background-color: var(--input-bg-color);
+                        border-radius: 100px;
+                        padding: 5px;
+                        text-decoration: none;
+
+                        p {
+                            margin-bottom: 0px;
+                            color: var(--light-theme-txt);
+                            font-size: 12px;
+                        }
+
+                        svg {
+                            color: var(--light-theme-txt);
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                .nested_tablist {
+
+                    .react-tabs__tab-list {
+                        border: none;
+                        color: var(--light-theme-txt);
+                        font-size: 12px;
+                        font-weight: 600;
+                        display: flex;
+                        gap: 5px;
+                        white-space: nowrap;
+                        overflow-x: auto;
+                        overflow-y: hidden;
+                        justify-content: center;
+                        background-color: transparent;
+                        border-radius: 100px;
+                        margin-bottom: 0px;
+                        list-style: none;
+                        padding-left: 0px;
+
+
+                        @media($breakpoint_SM) {
+                            font-size: 15px;
+                        }
+
+                    }
+
+                    .react-tabs__tab {
+                        padding: 5px 5px;
+
+                        &:focus-visible {
+                            outline: none;
+                        }
+                    }
+
+                    .react-tabs__tab--selected {
+                        border: none;
+                        background-color: transparent;
+                        color: var(--theme-txt-color);
+                        border-radius: 100px;
+                        border: 1px solid var(--red);
+                    }
+
+
+                }
+
+                .inner_nested_tablist {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .border_radius{
+                    border-radius: 100px;
+                    border: solid 1px var(--secondary-color);
+                    background-color: #123405;
+                    padding: 2px 8px;
+                }
+
+                .all_detail {
+                    padding: 10px 0px 0px 10px;
+                    height: 640px;
+                    overflow-y: scroll;
+
+                    .top_daydata {
+                        margin: 8px 0px;
+
+                        .top_data {
+                            display: flex;
+                            justify-content: space-between;
+                            background-color: var(--body-bg);
+                            padding: 10px 20px;
+
+                            .left_data {
+                                img {
+                                    width: 30px;
+                                    height: 30px;
+                                }
+
+                                .user_name {
+                                    color: var(--theme-txt-color);
+                                    font-size: 14px;
+                                }
+                            }
+
+                            .centre_data {
+                                p {
+                                    color: var(--light-theme-txt);
+                                    font-size: 13px;
+                                    margin-bottom: 0px;
+
+                                    span {
+                                        color: var(--theme-txt-color);
+                                    }
+                                }
+                            }
+
+                            .right_data {
+                                img {
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                            }
+                        }
+
+                        .bottom_data {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            background-color: var(--black-color);
+                            padding: 10px 20px;
+
+                            .date_filed {
+                                color: var(--theme-txt-color);
+                                font-size: 13px;
+                            }
+
+                            .round {
+                                color: var(--light-theme-txt);
+                                font-size: 13px;
+
+                                span {
+                                    color: var(--theme-txt-color);
+                                }
+                            }
+
+                            .mesg_box {
+                                border: 1px solid var(--border-color);
+                                border-radius: 100px;
+                                padding: 3px 10px;
+
+                                img {
+                                    width: 40px;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+
+
+            }
+        }
+    }
+}

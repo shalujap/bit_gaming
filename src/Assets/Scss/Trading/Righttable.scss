@@ -1,0 +1,289 @@
+.main_market_right {
+    .data_sec {
+
+        @media($breakpoint_XL){
+            display: flex;
+            gap: 10px;
+        }
+        .data_sec_new {
+            background-color: $input-bg;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+
+            @media($breakpoint_MD){
+                margin-bottom: 90px;
+            }
+
+            .main_search {
+                padding: 10px;
+
+                .searchbar {
+                    border: 1px solid var(--border-color);
+                    border-radius: 3px;
+                    background-color: $input-bg;
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    padding: 5px 10px;
+                }
+
+                svg {
+                    color: var(--theme-txt-color);
+                    cursor: pointer;
+                }
+
+                .search_input {
+                    border: none;
+                    background-color: transparent;
+                    color: var(--theme-txt-color);
+                    caret-color: var(--theme-txt-color);
+                    width: 100%;
+
+                    &:focus {
+                        outline: none;
+                        border: none;
+                    }
+                }
+            }
+
+            .main_table {
+                height: 440px;
+                overflow-x: scroll;
+                overflow-y: scroll;
+                padding: 0 10px 10px;
+                position: relative;
+
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    caption-side: bottom;
+
+                    thead {
+                        background-color: transparent;
+                        position: -webkit-sticky;
+                        position: sticky;
+                        top: 0;
+                        z-index: 1;
+
+                        tr {
+                            display: flex;
+                            justify-content: space-between;
+
+                            th {
+                                color: var(--theme-txt-color);
+                                flex-basis: 33%;
+                                font-size: 14px;
+                                font-weight: 400;
+
+                                svg {
+                                    cursor: pointer;
+                                    font-size: 16px;
+                                    color: var(--theme-txt-color);
+                                }
+                            }
+
+                            .pc {
+                                text-align: right;
+                            }
+
+                            .ch {
+                                text-align: right;
+                            }
+
+
+                        }
+                    }
+
+                    tbody {
+                        position: relative;
+                        top: 10px;
+
+                        .table_body {
+                            display: inline-table;
+                            position: absolute;
+                            width: 100%;
+
+                            tr {
+                                align-items: center;
+                                border-bottom: 1px dashed var(--border-color);
+                                color: var(--theme-txt-color);
+                                display: flex;
+                                height: 100%;
+                                justify-content: space-between;
+                                line-height: 1.5rem;
+                                overflow: auto;
+                                gap: 20px;
+
+                                a {
+                                    display: contents;
+                                    text-decoration: none;
+                                    width: 100%;
+
+                                    td {
+                                        color: var(--theme-txt-color);
+                                        font-size: 12px;
+                                        font-weight: 400;
+                                        white-space: nowrap;
+                                        width: 100%;
+
+                                        .coin {
+                                            height: 30px;
+                                            margin-right: 8px;
+                                            width: 30px;
+                                        }
+
+                                        span {
+                                            color: var(--light-theme-txt);
+                                        }
+
+                                        .clr {
+                                            background-color: $red;
+                                            border-radius: 3px;
+                                            color: var(--white-color);
+                                            margin-left: 2px;
+                                            padding: 3px 5px;
+                                        }
+                                    }
+
+                                    .pc {
+                                        color: $green;
+                                        text-align: right;
+                                    }
+
+                                    .ch {
+                                        color: $green;
+                                        margin-top: 8px;
+                                        text-align: right;
+
+                                        h6 {
+                                            font-size: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .main_table2 {
+            background-color: $input-bg;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+
+            @media($breakpoint_MD){
+                margin-bottom: 90px;
+            }
+            .inner {
+                .tabs_main {
+                    .react-tabs {
+                        .react-tabs__tab:focus:after {
+                            background-color: transparent;
+                        }
+
+                        .react-tabs__tab-list {
+                            border: none;
+                            color: var(--light-theme-txt);
+                            font-size: 17px;
+                            font-weight: 600;
+                            display: flex;
+                            gap: 20px;
+                            white-space: nowrap;
+                            overflow-x: auto;
+                            overflow-y: hidden;
+
+                            @media($breakpoint_SM){
+                                font-size: 15px;
+                            }
+                         
+
+                        }
+
+                        .react-tabs__tab {
+                            padding: 0px;
+                        }
+
+                        .react-tabs__tab--selected {
+                            border-bottom: 3px solid var(--primary-color) !important;
+                            border: none;
+                            background-color: transparent;
+                            padding: 0px;
+                            color: var(--theme-txt-color);
+                        }
+
+                        .react-tabs__tab-panel {
+                            .tab1 {
+                                height: 419px;
+                                margin-top: 10px;
+                                overflow-y: scroll;
+                                // padding: 0 10px 16px;
+
+                                table {
+                                    width: 100%;
+
+                                    thead {
+                                        background-color: transparent;
+                                        height: 40px;
+                                        position: -webkit-sticky;
+                                        position: sticky;
+                                        top: 0;
+                                        z-index: 1;
+
+                                        tr {
+                                            th {
+                                                color: var(--theme-txt-color);
+                                                font-size: 14px;
+                                                font-weight: 400;
+                                            }
+
+                                            .pc {
+                                                text-align: right;
+                                            }
+
+                                            .ch {
+                                                text-align: right;
+                                            }
+                                        }
+                                    }
+
+                                    tbody {
+                                        tr {
+                                            border-bottom: 1px dashed var(--border-color);
+                                            color: var(--theme-txt-color);
+                                            height: 100% ;
+                                            line-height: 1.5rem;
+                                            overflow: hidden;
+
+                                            td{
+                                                font-size: 12px;
+                                                font-weight: 400;
+                                                color: var(--theme-txt-color);
+                                            }
+
+                                            .green{
+                                                color: $green;
+                                            }
+                                            .pc{
+                                                text-align: right;
+                                            }
+
+                                            .ch{
+                                                text-align: right;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

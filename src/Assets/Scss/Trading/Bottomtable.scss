@@ -1,0 +1,121 @@
+.main_order_status {
+    margin-bottom: 10px;
+
+    .referral_faq {
+
+        .accordion {
+
+            .accordion-item {
+                margin-top: 10px;
+                border: 1px solid var(--border-color);
+                border-radius: 10px;
+                overflow: hidden;
+
+                .accordion-header {
+                    margin-bottom: none;
+
+                    .accordion-button {
+                        font-size: 18px;
+                        background-color: var(--body-bg);
+                        color: var(--theme-txt-color);
+                        box-shadow: none;
+
+                        @media ($breakpoint_ESM) {
+                            font-size: 14px;
+                            line-height: 1.4em;
+                            padding-left: 10px;
+                        }
+
+
+
+                    }
+
+                    .accordion-button::after {
+
+                        margin-left: auto;
+
+                        background-image: var(--black-white-image);
+                        font-size: 20px;
+
+                        height: 1.25rem;
+
+
+                    }
+
+                }
+            }
+
+            .accordion-body {
+                font-size: 17px;
+                background-color: var(--card-bg-color);
+                color: var(--theme-txt-color);
+
+                &:active {
+                    outline: none;
+                    border: none;
+                }
+
+                @media ($breakpoint_ESM) {
+                    font-size: 13px;
+                }
+            }
+
+            .accordion-button:not(.collapsed) {
+                background-color: var(--body-bg);
+                border: none;
+                color: var(--primary-color);
+            }
+
+            .accordion-button:not(.collapsed)::after {
+                filter: brightness(8.5);
+            }
+
+            .accordion-button:after {
+                filter: brightness(8.5);
+            }
+
+            .accordion-button:focus {
+                box-shadow: none;
+            }
+
+            .accordion-item:not(:first-of-type) {
+                border-top: 1;
+            }
+
+            .accordion-item:last-of-type .accordion-button.collapsed {
+                border-radius: 0px;
+            }
+
+            .accordion-button:not(.collapsed){
+                box-shadow: none !important;
+            } 
+
+            h1 {
+                @media($breakpoint_SM) {
+                    font-size: 30px;
+                }
+            }
+
+            p {
+                font-size: 15px;
+                color: var(--light-theme-txt);
+
+                a {
+                    color: var(--primary-color);
+                }
+            }
+
+            h3 {
+                font-size: 28px;
+                font-weight: 700;
+                color: var(--primary-color);
+
+            }
+
+            h6 {
+                font-size: 21px;
+                font-weight: 500;
+            }
+        }
+    }
+}
