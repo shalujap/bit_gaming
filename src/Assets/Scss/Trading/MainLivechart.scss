@@ -206,6 +206,7 @@
 }
 
 .round_hostory {
+    
     .accordion {
         .accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
             border-bottom-right-radius: 0px;
@@ -263,8 +264,15 @@
 
 
                 }
+               
 
             }
+            .round_history_type ul{
+                padding: 0px;
+                li{
+                    list-style: none;
+                }
+            } 
         }
 
         .accordion-body {

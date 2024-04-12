@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import { useState } from 'react';
 import CanvasJSReact from '@canvasjs/react-charts';
 import { Accordion } from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+
 
 
 class MainLiveChart extends Component {
@@ -105,6 +109,7 @@ class MainLiveChart extends Component {
   };
 
   render() {
+
     return (
       <>
         <div className='round_history'> {/* Corrected class name */}
@@ -114,6 +119,13 @@ class MainLiveChart extends Component {
                 <h6>Round History</h6>
               </Accordion.Header>
               <Accordion.Body>
+                <div className='round_history_type'>
+                  <ul>
+                    <li>
+                      <button variant="primary" > 1.55X</button>
+                    </li>
+                  </ul>
+                </div>
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
