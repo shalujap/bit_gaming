@@ -17,12 +17,20 @@
             .left_inner {
                 display: flex;
 
+                @media($breakpoint_LG){
+                    flex-direction: column-reverse;
+                }
+
                 .order_book_sec {
                     flex-basis: 30%;
                     margin-bottom: 10px;
                     background-color: var(--card-bg-color);
                     border-radius: 10px;
                     // padding: 10px;
+
+                    @media($breakpoint_LG){
+                        margin-top: 10px;
+                    }
                 }
 
                 .main_chart_sec {
@@ -30,7 +38,7 @@
                     margin-left: 10px;
                     overflow: hidden;
 
-                    @media($breakpoint_MD) {
+                    @media($breakpoint_LG) {
                         flex-basis: 100%;
                         margin-left: 0px;
                     }
@@ -100,6 +108,10 @@
             font-size: 15px;
         }
 
+        @media($breakpoint_ESM){
+            padding-left: 2rem;
+        }
+
     }
 
     .react-tabs__tab {
@@ -138,6 +150,11 @@
     height: 5px;
 }
 
+.canvasjs-chart-canvas{
+    background-color: #1b1c1d63;
+    border-radius: 10px;
+}
+
 
 @mixin card__bg__s {
     // background-color: $left__trading;
@@ -146,114 +163,6 @@
     overflow: hidden;
     // border: 1px solid #d9dadb3a;
     border-radius: 3px;
-}
-
-.trading_responsive_tab {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-color: var(--card-bg-color);
-    color: var(--theme-txt-color);
-    font-family: 'Open Sans', sans-serif;
-    z-index: 7777;
-    display: none;
-
-    @media($breakpoint_MD) {
-        display: block;
-    }
-
-    .Footer___tab {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-
-        .react-tab__1 {
-            text-transform: capitalize;
-            font-weight: 400;
-            font-size: 10px;
-            padding: 8px 7px;
-            @include card__bg__s;
-            background-color: var(--card-bg-color);
-            border: 0px;
-            overflow: visible;
-
-            @media($breakpoint_SM) {
-                padding: 8px 2px;
-            }
-
-
-            .btn {
-                border: 0px;
-
-                svg {
-                    width: 20px;
-                    display: block;
-                    margin: auto;
-                    color: var(--theme-txt-color);
-                }
-
-                span {
-                    white-space: nowrap;
-                    display: block;
-                    color: var(--theme-txt-color);
-
-                    @media($breakpoint_SM) {
-
-                        font-size: 10px;
-                    }
-                }
-
-            }
-
-            .logo__Main {
-                .react-tab__1__logo {
-                    background-color: transparent;
-                    display: block;
-                    position: relative;
-                    z-index: 1;
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: -25px;
-                        left: 50%;
-                        width: 45px;
-                        margin: auto;
-                        height: 45px;
-                        background-color: var(--card-bg-color);
-                        z-index: -1;
-                        border-radius: 50%;
-                        transform: translate(-23px, -1px);
-                    }
-                }
-
-                img {
-                    width: 24px;
-                    transform: scale(2);
-                    position: relative;
-                    top: -14px;
-
-                }
-            }
-        }
-
-        .react-tabs__tab--selected {
-            font-size: 10px;
-            border: 0px;
-            background-color: var(--card-bg-color);
-            position: relative;
-
-        }
-    }
-}
-
-.d_mobail_none {
-    @media($breakpoint_MD) {
-        display: none;
-    }
 }
 
 .trade_tab_none {

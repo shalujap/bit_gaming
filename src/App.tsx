@@ -9,6 +9,8 @@ import Footer from './Component/Footer';
 import MainTrading from './Component/MainTrading';
 
 
+
+
 function App() {
 
   function Headeronly() {
@@ -32,6 +34,7 @@ function App() {
           <Route path='/' element={<MainTrading />} />
             <Route path='*' element={<MainTrading />} />
             <Route path='/main-trade' element={<MainTrading />} />
+            <Route path='/main-trade' element={<MainTrading />} /> 
           </Route>
 
         </Routes>

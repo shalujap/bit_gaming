@@ -5,14 +5,6 @@
         background-color: var(--card-bg-color);
         border-radius: 10px;
 
-        // @media only screen and (min-width:769px) and (max-width:839px){
-        //     height: 394px;
-        // }
-
-        @media($breakpoint_MD) {
-            margin-bottom: 90px;
-        }
-
 
         img {
             width: 100%;
@@ -27,23 +19,50 @@
     // height: 419px;
     margin-bottom: 10px;
 
-
-    @media($breakpoint_MD) {
-        margin-bottom: 90px;
-    }
-
-
     .main_buysell {
         display: flex;
         justify-content: space-between;
         width: 100%;
         gap: 10px;
+     
+
+        @media($breakpoint_XXL) {
+            display: block;
+        }
+
+        @media($breakpoint_LG) {
+            display: flex;
+        }
+
+        @media($breakpoint_MD) {
+            display: block;
+        }
 
         .inner {
             width: 50%;
             border-radius: 10px;
             padding: 0px 20px 20px 20px;
             background-color: var(--card-bg-color);
+            margin-top: 10px;
+
+            @media($breakpoint_XXL) {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            @media($breakpoint_LG) {
+                width: 50%;
+            }
+
+            @media($breakpoint_MD) {
+                width: 100%;
+            }
+
+            .react-tabs .react-tabs__tab-list {
+                @media($breakpoint_ESM) {
+                    padding-left: 0px;
+                }
+            }
 
             .calculation_Sec {
                 display: flex;
@@ -51,6 +70,11 @@
                 gap: 10px;
                 margin-top: 15px;
                 width: 100%;
+
+                @media($breakpoint_ESM) {
+                    flex-wrap: wrap;
+                }
+
 
                 .left_sec {
                     .number_input {
@@ -115,9 +139,17 @@
                         text-align: center;
                         white-space: nowrap;
 
+                        @media($breakpoint_LG) {
+                            padding: 10px 20px;
+                        }
+
                         h6 {
                             color: var(--theme-txt-color);
                             font-size: 18px;
+
+                            @media($breakpoint_SM) {
+                                font-size: 15px;
+                            }
                         }
                     }
                 }
@@ -150,17 +182,18 @@
                             cursor: pointer;
                             padding: 5px 20px;
                         }
-                        .right_toggle{
+
+                        .right_toggle {
                             display: flex;
                             align-items: center;
                             gap: 5px;
 
-                            p{
+                            p {
                                 margin-bottom: 0px;
                                 color: var(--theme-txt-color);
                             }
 
-                            .value{
+                            .value {
                                 color: var(--theme-txt-color);
                             }
                         }
@@ -169,5 +202,116 @@
             }
 
         }
+    }
+}
+
+.round_hostory {
+    .accordion {
+        .accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .accordion-item {
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+
+            .accordion-header {
+                margin-bottom: none;
+
+                .accordion-button {
+                    font-size: 18px;
+                    background-color: var(--body-bg);
+                    color: var(--theme-txt-color);
+                    box-shadow: none;
+
+                    @media ($breakpoint_ESM) {
+                        font-size: 14px;
+                        line-height: 1.4em;
+                        padding-left: 10px;
+                    }
+
+                    h2 {
+
+                        @media($breakpoint_XL) {
+                            font-size: 25px;
+                        }
+
+                        @media($breakpoint_MD) {
+                            font-size: 20px;
+                        }
+
+                        @media($breakpoint_SM) {
+                            font-size: 18px;
+                        }
+                    }
+
+
+
+                }
+
+                .accordion-button::after {
+
+                    margin-left: auto;
+
+                    background-image: var(--black-white-image);
+                    font-size: 20px;
+
+                    height: 1.25rem;
+
+
+                }
+
+            }
+        }
+
+        .accordion-body {
+            font-size: 17px;
+            background-color: var(--card-bg-color);
+            color: var(--theme-txt-color);
+
+            &:active {
+                outline: none;
+                border: none;
+            }
+
+            @media ($breakpoint_ESM) {
+                font-size: 13px;
+                padding: 10px;
+            }
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: var(--body-bg);
+            border: none;
+            color: var(--primary-color);
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            filter: brightness(8.5);
+        }
+
+        .accordion-button:after {
+            filter: brightness(8.5);
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .accordion-item:not(:first-of-type) {
+            border-top: 1;
+        }
+
+        .accordion-item:last-of-type .accordion-button.collapsed {
+            border-radius: 0px;
+        }
+
+        .accordion-button:not(.collapsed) {
+            box-shadow: none !important;
+        }
+
     }
 }

@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-import { Accordion } from "react-bootstrap";
 import partner1 from "../Assets/Images/partner1.png";
 import partner2 from "../Assets/Images/partner2.png";
 import partner3 from "../Assets/Images/partner3.png";

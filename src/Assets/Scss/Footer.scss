@@ -202,7 +202,7 @@
                 font-weight: 700;
                 font-size: 18px;
 
-                @media($breakpoint_SM){
+                @media($breakpoint_SM) {
                     font-size: 15px;
                 }
             }
@@ -218,6 +218,11 @@
                     img {
                         width: 100px;
                         height: 50px;
+
+                        @media($breakpoint_SM) {
+                            width: 70px;
+                            height: 30px;
+                        }
                     }
                 }
             }
@@ -234,7 +239,7 @@
                 font-weight: 700;
                 font-size: 18px;
 
-                @media($breakpoint_SM){
+                @media($breakpoint_SM) {
                     font-size: 15px;
                 }
             }
@@ -250,53 +255,76 @@
                     img {
                         width: 50px;
                         height: 40px;
+
+                        @media($breakpoint_SM) {
+                            width: 40px;
+                            height: 30px;
+                        }
                     }
                 }
             }
         }
     }
 
-    .bottom_sec{
+    .bottom_sec {
         border-top: 1px solid var(--border-color);
         padding: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
+        @media($breakpoint_ESM){
+            display: block;
+        }
+
         h5 {
             color: var(--theme-txt-color);
             font-weight: 700;
             font-size: 18px;
 
-            @media($breakpoint_SM){
+            @media($breakpoint_SM) {
                 font-size: 15px;
             }
         }
 
-        .social_media{
-            .media_icons{
+        .social_media {
+            .media_icons {
                 display: flex;
                 gap: 15px;
                 align-items: center;
                 margin-top: 15px;
 
-                img{
+                img {
                     width: 30px;
                     height: 30px;
+
+                    @media($breakpoint_SM) {
+                        width: 25px;
+                        height: 25px;
+                    }
                 }
             }
         }
 
-        .licsence_Sec{
-            .licsens_img{
+        .licsence_Sec {
+            @media($breakpoint_ESM){
+               margin-top: 20px;
+            }
+
+            .licsens_img {
                 display: flex;
                 gap: 15px;
                 align-items: center;
                 margin-top: 15px;
 
-                img{
+                img {
                     width: 40px;
                     height: 40px;
+
+                    @media($breakpoint_SM) {
+                        width: 25px;
+                        height: 25px;
+                    }
                 }
             }
         }
