@@ -17,9 +17,19 @@
 
 
                 .data_table {
-                    padding: 0 0 16px;
+                    padding: 0 0 10px;
                     height: 653px;
                     overflow-y: scroll;
+
+
+
+                    @media($breakpoint_XL) {
+                        height: 580px;
+                    }
+
+                    @media($breakpoint_LG) {
+                        height: 300px;
+                    }
 
                     table {
                         width: 100%;
@@ -163,6 +173,10 @@
                             font-size: 15px;
                         }
 
+                        @media($breakpoint_ESM) {
+                            padding-left: 3rem;
+                        }
+
                     }
 
                     .react-tabs__tab {
@@ -184,12 +198,30 @@
 
                 }
 
+                .inner_tab_panel {
+
+                    .icon_style {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .data_table table tbody tr td:first-child {
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+                    }
+
+                    .data_table table tbody tr td:last-child {
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
+                }
+
                 .inner_nested_tablist {
                     display: flex;
                     justify-content: center;
                 }
 
-                .border_radius{
+                .border_radius {
                     border-radius: 100px;
                     border: solid 1px var(--secondary-color);
                     background-color: #123405;
@@ -198,8 +230,16 @@
 
                 .all_detail {
                     padding: 10px 0px 0px 10px;
-                    height: 640px;
+                    height: 653px;
                     overflow-y: scroll;
+
+                    @media($breakpoint_XL) {
+                        height: 580px;
+                    }
+
+                    @media($breakpoint_LG) {
+                        height: 300px;
+                    }
 
                     .top_daydata {
                         margin: 8px 0px;

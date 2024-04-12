@@ -1,6 +1,6 @@
 import React from 'react'
 import { Accordion } from 'react-bootstrap'
-import { Tab, TabList, TabPanel, Tabs } from 'react-tabs'
+
 
 const BottomTable = () => {
     return (
