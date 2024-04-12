@@ -67,14 +67,17 @@ class MainLiveChart extends Component {
       xVal++;
       chart.render();
       chart.axisY[0].set("maximum", yVal + 1);
+      
+      // Update position of airplane image
       this.positionMarkerImage(chart, chart.options.data[0].dataPoints.length - 1);
+      
+      // Update position of airplane image on window resize
+      window.addEventListener('resize', () => {
+        this.positionMarkerImage(chart, chart.options.data[0].dataPoints.length - 1);
+      });
     };
 
     var updateId = setInterval(() => { updateChart(); }, updateInterval);
-
-    window.addEventListener('resize', () => {
-      this.positionMarkerImage(chart, chart.options.data[0].dataPoints.length - 1);
-    });
 
     // Store updateId and chart in component state
     this.setState({ updateId });
@@ -82,11 +85,8 @@ class MainLiveChart extends Component {
   }
 
   componentWillUnmount() {
-    // Clear interval and remove event listener on component unmount
+    // Clear interval on component unmount
     clearInterval(this.state.updateId);
-    window.removeEventListener('resize', () => {
-      this.positionMarkerImage(this.state.chart, this.state.chart.options.data[0].dataPoints.length - 1);
-    });
   }
 
   positionMarkerImage = (chart, index) => {
@@ -95,12 +95,8 @@ class MainLiveChart extends Component {
 
     if (!this.airplaneImage) {
       this.airplaneImage = new Image();
-      // this.airplaneImage.src = "https://image.flaticon.com/icons/png/512/868/868059.png";
       this.airplaneImage.src = "https://i.imgur.com/4vH0hYL.png";
-      this.airplaneImage.style.position = "absolute";
-      this.airplaneImage.style.display = "block";
-      this.airplaneImage.style.height = "40px";
-      this.airplaneImage.style.width = "40px";
+      this.airplaneImage.classList.add("airplane-image"); // Add class for styling
       this.chartContainerRef.current.appendChild(this.airplaneImage);
     }
 
@@ -111,7 +107,7 @@ class MainLiveChart extends Component {
   render() {
     return (
       <>
-        <div className='round_hostory'>
+        <div className='round_history'> {/* Corrected class name */}
           <Accordion defaultActiveKey="0">
             <Accordion.Item eventKey="1">
               <Accordion.Header>
@@ -125,7 +121,7 @@ class MainLiveChart extends Component {
 
         <div>
           {/* Chart container */}
-          <div ref={this.chartContainerRef} style={{ height: '500px', width: '100%', position: 'relative' }}></div>
+          <div ref={this.chartContainerRef} className="chart-container"></div>
         </div>
       </>
     );
